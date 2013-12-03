@@ -1,11 +1,12 @@
-# Symfony Parallel Tests
+# Running Symfony Tests In Parallel
 
 This repository aims to reflect code published in an article on the [marmelab's blog](http://marmelab.overblog.com/2013/11/how-to-use-docker-to-run-phpunit-tests-in-parallel.html).
 
 This is a simple Symfony2 project with 2 tests (`DemoControllerTest` & `SecondControllerTest`).
-Each one simulate a lots of tests with a pause of 5 seconds.
 
-Running theses tests the normal way :
+Each one simulate a lot of tests with a pause of 5 seconds.
+
+Running these tests the normal way :
 ```sh
 $ time phpunit -c app/
 
@@ -14,7 +15,7 @@ user	0m0.379s
 sys	0m0.050s
 ```
 
-Running theses tests in parallel :
+Running these tests in parallel :
 ```sh
 $ time sh tests.sh
 
@@ -23,11 +24,11 @@ user	0m0.084s
 sys	0m0.100s
 ```
 
-## Why using Docker to runs your tests ?
-This example is not explicit, you can run theses tests in parallel only with [GNU Parallel](http://www.gnu.org/software/parallel/).
+## Why Using Docker To Run Your Tests ?
+This example is not explicit, you can run these tests in parallel only with [GNU Parallel](http://www.gnu.org/software/parallel/).
 
-However you tests can use a storage engine, a search index or other dependencies. In this case when you alter data in a test this data should not be changed in other tests.
-Docker allows to run each tests in isolated containers so other tests aren't affected.
+However your tests can use a storage engine, a search index or other dependencies. In this case when you alter data in a test, this data should not be changed in other tests.
+Docker allows to run each test in isolated containers so other tests aren't affected.
 
 
 ## Installation
