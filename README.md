@@ -42,8 +42,8 @@ composer install
 [Docker](http://www.docker.io/) only support Linux LXC (for now) so we should run a virtual machine :
 
 ```sh
-vagrant ssh
 vagrant up
+vagrant ssh
 
 cd /vagrant
 ```
